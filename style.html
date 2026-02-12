@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8c8dc; /* Pink background, like in the photo */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.container {
+    position: relative; /* Needed for the 'No' button to move */
+}
+
+.photo {
+    max-width: 300px; /* Adjust size as needed */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 2.5em;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+#yesBtn {
+    background-color: #28a745; /* Green 'Yes' button */
+    color: white;
+}
+
+#noBtn {
+    background-color: #dc3545; /* Red 'No' button */
+    color: white;
+    position: absolute; /* Allows the button to be moved anywhere */
+}
+
+.hidden {
+    display: none;
+}
+
+/* When the 'Yes' button is clicked, hide the buttons and show the message */
+.container.success .buttons,
+.container.success h1 {
+    display: none;
+}
+.container.success #successMessage {
+    display: block;
+    color: #d63384;
+    font-size: 2em;
+}
